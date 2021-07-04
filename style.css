@@ -1,0 +1,659 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Overpass', Arial, Helvetica;
+    color: #072f4e;
+    font-size: 1.3rem;
+    line-height: 1.4em;
+    margin: 0%;
+}
+
+a, button {
+    cursor: pointer;
+}
+
+/* ---------HEADER--------------- */
+
+.main-header {
+    font-weight: bold;
+    font-size: 15px;
+    text-transform: uppercase;
+
+    /* position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%; */
+}
+
+.logo {
+    font-family: 'Teko';
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.logo-nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#ul-main{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.flex-item-header{
+    margin: 1rem;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    line-height: 1.5px;
+}
+
+.flex-item-header:hover {
+    border-bottom: 7px solid rgba(0, 234, 255, 0.616);
+    padding-bottom: 1rem;
+}
+
+.flex-item-header a {
+    color: white;
+    text-decoration: none;
+}
+
+/* ---------JUMBOTRON--------------- */
+
+.container-form-main {
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 8%;
+}
+
+.container-jumbo {
+    display: flex;
+    align-items: center;
+    height: 720px;
+    width: 620px;
+    position: relative;
+}
+
+.container-jumbo::before{
+    content: "";
+    background-image: url('./png/contactless-payment.png');
+    height: 840px;
+    width: 720px;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    /* top: 0%; */
+    right: 0%;
+    position: absolute;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+.jumbotron article {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+}
+
+.st-italic {
+    margin: 0 0 10px 15px;
+    font-size: 40px;
+    font-style: italic;
+    line-height: 120%;
+}
+
+.text-normal {
+    margin: 0 0 0 15px;
+    font-size: 25px;
+    font-style: normal;
+}
+
+span.st-italic {
+    margin: 0%;
+}
+
+/* ---------CONTACT FORM--------------- */
+
+.contact-form {
+    display: block;
+    padding: 100px 50px 55px;
+}
+
+input {
+    outline: none;
+    border: none;
+}
+
+.contact-form-title {
+    width: 100%;
+    display: block;
+    font-family: 'Comfortaa';
+    font-size: 30px;
+    color: #333;
+    line-height: 1.2;
+    text-align: center;
+    padding-bottom: 48px;
+}
+
+.wrap-input {
+    width: 100%;
+    position: relative;
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.validate-input {
+    position: relative;
+}
+
+.label-input {
+    font-family: 'Comfortaa';
+    font-size: 12px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    padding: 15px 0 2px 24px;
+}
+
+.input100 {
+    display: block;
+    font-family: 'Comfortaa';
+    width: 100%;
+    height: 48px;
+    background: transparent;
+    font-size: 18px;
+    line-height: 1.2;
+    padding: 0 26px;
+}
+
+.container-contact-btn {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.contact-form-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    background: #7398c4;
+    font-size: 12px;
+    color: #fff;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    -webkit-transition: all .4s;
+    -o-transition: all .4s;
+    -moz-transition: all .4s;
+    transition: all .4s;
+}
+
+.contact-form-btn:hover {
+    background: #072f4e;
+}
+
+/* ---------CATALOGUE--------------- */
+
+.cat {
+    margin-bottom: 8%;
+}
+
+.card {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.card li {
+    list-style: none;
+}
+
+.card img {
+    height: 480px;
+    width: 420px;
+}
+
+.card a div:first-child {
+    display: inline-block;
+    padding: 10px;
+}
+
+.card a {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    border-style: solid;
+    border-width: 1.2px;
+    border-left-width: 1.2px;
+    border-right-width: 1.2px;
+    border-color: #072f4e;
+    border-radius: 35px;
+}
+
+.card a div:last-child {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-100%);
+}
+
+.card a div {
+    transition: transform 0.2s ease-out;
+}
+
+.card a:hover div:first-child {
+    transform: translateX(100%);
+}
+
+.card a:hover div:last-child {
+    transform: none;
+}
+
+.cat h1 {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0; 
+    border-top: 15px solid #072f4e;
+}
+
+.card .description {
+    color: #072f4e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 10px;
+}
+
+.description p {
+    padding-right: 10px;
+}
+
+/* -------FAQS ACCORDION------- */
+
+.faqs h2 {
+    padding-bottom: 1%;
+}
+
+.faqs {
+    padding: 0 50px 8% 50px;
+}
+
+.accordion {
+    background-color: #072f4e;
+    color: white;
+    padding: 18px;
+    margin: 0%;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+.faqs p {
+    padding: 10px;
+}
+
+/* --------FOOTER--------- */
+
+.footer-base {
+    grid-template-rows: repeat(3, 1fr);
+    padding: 40px auto 10px;
+    text-align: center;
+}
+
+.foo-logo-social-media {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icons-sm {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.redes-footer {
+    padding: 0 10px;
+    width: 100%;
+}
+
+.redes-footer img {
+    height: 52px;
+    width: 52px;
+}
+
+.foo-links {
+    padding: 1% 0%;
+    color: white;
+    font-size: 12px;
+}
+
+.foo-links a {
+    color: white;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.foo-about {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+/* --------MEDIA QUERIES--------- */
+
+@media screen and (min-width:1096px) {
+    .container-gbl {
+        color: white;
+        background-color: #072f4e;
+        padding: 1rem 5%;
+        width: 100%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .jumbotron-xl-1 {
+        display: grid;
+        grid-template-columns: 1fr 250px;
+        grid-template-rows: 1fr;
+        gap: 5px;
+    }
+
+    .col-xl-1 {
+        flex: 65%;
+        max-width: 65%;
+    }
+    .col-xl-2 {
+        flex: 35%;
+        max-width: 35%;
+    }
+
+    .st-italic-25 {
+        margin: 0 0 10px 15px;
+        font-size: 25px;
+        font-style: italic;
+    }
+    
+    .text-normal-20 {
+        margin: 0 0 0 30px;
+        font-size: 20px;
+        font-style: normal;
+    }
+}
+
+@media screen and (max-width:1096px) and (min-width:768px) {
+    .container-gbl-x {
+        color: white;
+        background-color: #072f4e;
+        padding: 0.5% 5%;
+        width: 100%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #header {
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+    }
+
+    .jumbotron-x-1 {
+        display: block;
+        align-content: stretch;
+        gap: 5px;
+    }
+
+    .col-x-1 {
+        flex: 55%;
+        max-width: 55%;
+    }
+    .col-x-2 {
+        flex: 45%;
+        max-width: 45%;
+    }
+
+    .st-italic-x {
+        margin: 0 0 10px 15px;
+        font-size: 30px;
+        font-style: italic;
+        line-height: 120%;
+    }
+
+    .text-normal-x {
+        margin: 0 0 0 15px;
+        font-size: 20px;
+        font-style: normal;
+    }
+
+    .cft-x {
+    font-size: 20px;
+    }
+
+    .lb-i-x {
+    font-size: 10px;
+    }
+
+    .input100-x{
+    font-size: 16px;
+    }
+
+    .st-italic-20 {
+        margin: 0 0 10px 15px;
+        font-size: 20px;
+        font-style: italic;
+    }
+    
+    .text-normal-15 {
+        margin: 0 0 0 30px;
+        font-size: 15px;
+        font-style: normal;
+    }
+
+    .redes-footer img {
+        height: 42px;
+        width: 42px;
+    }
+
+    .foo-links {
+        font-size: 10px;
+    }
+    
+    .foo-links a {
+        font-size: 10px;
+    }
+}
+
+
+@media (max-width: 768px) and (min-width: 560px) {
+    .container-gbl-md {
+        color: white;
+        background-color: #072f4e;
+        padding: 0.5% 5%;
+        width: 100%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #header {
+        margin: auto;
+        width: 100%;
+        font-size: 10px;
+    }
+
+    .logo-md {
+        font-size: 22x;
+    }
+
+    .jumbotron-md-1 {
+        display: block;
+        align-content: stretch;
+        gap: 5px;
+    }
+
+    .col-md-1 {
+        width: 100%;
+    }
+
+    .col-md-1::before {
+        height: 100%;
+        width: 100%;
+    }
+
+    .col-md-2 {
+        width: 100%;
+    }
+
+    .st-italic-md {
+        margin: 0 0 10px 15px;
+        font-size: 25px;
+        font-style: italic;
+        line-height: 120%;
+    }
+
+    .text-normal-md {
+        margin: 0 0 0 15px;
+        font-size: 15px;
+        font-style: normal;
+    }
+
+    .st-italic-20 {
+        margin: 0 0 10px 15px;
+        font-size: 20px;
+        font-style: italic;
+    }
+
+    .text-normal-15 {
+        margin: 0 0 0 30px;
+        font-size: 15px;
+        font-style: normal;
+    }
+
+    .redes-footer img {
+        height: 32px;
+        width: 32px;
+    }
+
+    .foo-links {
+        font-size: 8px;
+    }
+
+    .foo-links a {
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 560px) {
+    body {
+    font-size: 0.5rem;
+    }
+    .container-gbl-md {
+        color: white;
+        background-color: #072f4e;
+        padding: 0.5% 5%;
+        width: 100%;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #header {
+        margin: auto;
+        width: 100%;
+        font-size: 8px;
+    }
+
+    .flex-item-header{
+        margin: 0.5rem;
+        padding: 0.2rem 0.8rem;
+        font-size: 10px;
+    }
+
+    .logo-s {
+        font-size: 20px;
+    }
+
+    .jumbotron-s-1 {
+        display: block;
+        align-content: stretch;
+        gap: 5px;
+    }
+
+    .col-s-1 {
+        width: 100%;
+    }
+
+    .col-s-1::before {
+        height: 50%;
+        width: 50%;
+    }
+
+    .col-s-2 {
+        width: 100%;
+        padding: 20px 50px 55px;
+    }
+
+    .st-italic-xs {
+        margin: 0 0 10px 15px;
+        font-size: 18px;
+        font-style: italic;
+        line-height: 120%;
+    }
+
+    .text-normal-xs {
+        margin: 0 0 0 15px;
+        font-size: 13px;
+        font-style: normal;
+    }
+
+    .card img {
+        height: 320px;
+        width: 300px;
+    }
+
+    .redes-footer img {
+        height: 22px;
+        width: 22px;
+    }
+
+    .foo-links {
+        font-size: 7px;
+    }
+
+    .foo-links a {
+        font-size: 7px;
+    }
+
+    .foo-about-s {
+        font-size: 9px;
+    }
+}
